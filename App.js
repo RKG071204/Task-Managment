@@ -9,6 +9,8 @@ import Messages from './components/Messages';
 import Users from './components/Users';
 import Settings from './components/Settings';
 import './App.css';
+import Projects from './components/Projects'; // Import Projects component
+import Others from './components/Others'; // Import Others component
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           <Sidebar />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Projects />} /> {/* Add Projects route */}
+            <Route path="/others" element={<Others />} /> {/* Add Others route */}
             <Route path="/assign-task" element={<AssignTask />} />
             <Route path="/view-task" element={<ViewTask />} />
             <Route path="/messages" element={<Messages />} />
