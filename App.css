@@ -1,0 +1,261 @@
+/* Reset some default browser styles */
+body, h1, h2, p {
+  margin: 25px;
+  padding: 0;
+}
+
+/* Set a background color for the entire app */
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  background-color: white; /* White color */
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  margin-left: -66px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .search-bar input[type="text"] {
+  padding: 5px;
+  border: 2px solid #007bff; /* Set the border color to the desired color (blue in this case) */
+  border-radius: 3px;
+}
+
+Highlight the border on focus (when the input is clicked)
+.navbar .search-bar input[type="text"]:focus {
+  border-color: #007bff; /* Change the border color to the desired highlight color (blue in this case) */
+  outline: none; /* Remove the default browser outline */
+}
+
+.navbar .search-bar {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+
+.navbar .user-icons {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .user-icons .user-avatar {
+  margin-left: 10px;
+}
+
+/* Style the sidebar */
+.sidebar {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  overflow-y: auto;
+}
+
+.sidebar .sidebar-header {
+  display: flex;
+  align-items: center;
+  background-color: #18dcff; /* Set the background color to the desired color (blue in this case) */
+  padding: 0px 0px; /* Adjust padding as needed */
+  margin-top: 15px;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-inline-end: 20px;
+  margin-inline-start: 20px;
+  margin-block-end: 10px;
+}
+
+.sidebar .sidebar-header p {
+  margin-left: 20px;
+  margin-top: 20px; /* Remove top margin to align text vertically */
+  color: rgb(0, 0, 0); /* Set text color to white for better visibility */
+}
+
+.sidebar .sidebar-header .dark-mode-label {
+  margin-right: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0px;
+  width: 100%;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+/* Add a hover effect to Sidebar links */
+.sidebar ul li a:hover {
+  background-color: rgb(119, 188, 253);
+  color: rgb(0, 0, 0); /* Change text color to white on hover */
+}
+
+.sidebar ul li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding-inline: 60px;
+  padding-block: 5px;
+}
+
+.sidebar ul li a svg {
+  margin-right: 10px;
+}
+
+/* Style the content area */
+.content {
+  margin-left: 210px;
+  padding: 20px;
+}
+
+/* Adjusting Height */
+.content-main {
+  height: 100%; /* You can use a specific value like "500px" or a percentage of the viewport height */
+}
+
+/* Adjusting Width */
+.content-main {
+  width: 100%; /* You can use a specific value like "800px" or a percentage of the viewport width */
+}
+
+/* Adjusting Both Height and Width */
+.content-main {
+  height: 100vh; /* 80% of the viewport height */
+  width: 100%; /* 80% of the viewport width */
+}
+
+/* Style the bottom buttons in the sidebar */
+.sidebar .bottom-buttons {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.sidebar .bottom-buttons .dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.sidebar .bottom-buttons .dark-mode-toggle .dark-mode-label {
+  margin-right: 10px;
+}
+
+.sidebar .bottom-buttons .dark-mode-toggle .dark-mode-switch {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background-color: #000000;
+  border-radius: 20px;
+}
+
+.sidebar .bottom-buttons .dark-mode-toggle .dark-mode-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.sidebar.dark .bottom-buttons .dark-mode-toggle .dark-mode-slider {
+  transform: translateX(20px);
+}
+
+.sidebar .bottom-buttons .dark-mode-toggle .dark-mode-text {
+  margin-inline-end: 80px;
+}
+
+.sidebar .bottom-buttons .logout-button button {
+  background-color: #bdbdbd;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 0px;
+  cursor: pointer;
+  width: 100% !important;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.sidebar.dark .bottom-buttons .logout-button button {
+  background-color: #919191;
+}
+
+.sidebar .bottom-buttons .logout-button button svg {
+  margin-right: 10px;
+}
+
+#custom-logout-button {
+  width: 230px; /* Adjust the width as needed */
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .navbar .search-bar {
+    display: none;
+  }
+
+  .sidebar {
+    width: 100%;
+    top: 0;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .sidebar ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .sidebar ul li {
+    margin: 0;
+  }
+
+  .sidebar ul li a {
+    display: flex;
+    padding: 10px 0;
+    text-align: left;
+    width: 100%;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+}
