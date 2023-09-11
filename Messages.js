@@ -1,10 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Messages = () => {
   return (
     <div className="content-main">
-      <h2>Messages</h2>
-      <p>This is the Messages page content.</p>
+      <div className="messages-header">
+        <h2>Messages</h2>
+        <Link to="/comments" className="comments-button">
+          COMMENTS
+        </Link>
+      </div>
+      {/* Add your messages content here */}
     </div>
   );
 };
